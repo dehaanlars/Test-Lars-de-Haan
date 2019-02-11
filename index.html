@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-utf-8"/>
+     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      	<title>Tesla Moter Stock</title>
+      	<link rel="stylesheet" type="text/css" href="style.css">
+	    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	    <script type="text/javascript">
+	      google.charts.load('current', {'packages':['corechart']});
+	      google.charts.setOnLoadCallback(drawChart);
+
+	      function drawChart() {
+	        var data = google.visualization.arrayToDataTable([
+	          ['Year', 'Stockprice'],
+	          ['2013',  30.76],
+	          ['2014',  90.71],
+	          ['2015',  180.81],
+	          ['2016',  200.31],
+	          ['2017',  210.51]
+	        ]);
+
+	        var options = {
+	          title: 'NASDAQ',
+	          curveType: 'function',
+	          legend: { position: 'bottom' }
+	        };
+
+	        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+	        chart.draw(data, options);
+	      }
+	    </script>
+	</head>
+	
+	<body>
+		<div class="content	">
+			<header>
+				<H1>Tesla Motor Stock</H1>
+				<div class="currentinfo">
+					<h2>Huidig</h2>
+					<h3 class="stock">210.51</h3>
+					<h3>+12.3%</h3>
+				</div>	
+			</header>	
+			<div id="curve_chart"></div>
+			<div class="extrainfo">
+				<ul>
+					<li>2013 <h5>39.24</h5><h6>-</h6></li>
+					<li>2014 <h5>149.56</h5><h6>+12.9%</h6></li>
+					<li>2015 <h5>219.31</h5><h6>+15.0%</h6></li>
+					<li>2016 <h5>200.01</h5><h6>+19.6%</h6></li>
+					<li>2017 <h5>245.69</h5><h6>+5.4%</h6></li>
+				</ul>
+			</div>
+		</div>
+	</body>
+
+</html>
